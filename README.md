@@ -10,12 +10,13 @@
 
 | نسخه | سال | وضعیت | لینک |
 |------|-----|--------|------|
-| C++11 | ۲۰۱ | ✅ منتشر شده | [مشاهده](cpp11/README.md) |
+| C++11 | ۲۰۱۱ | ✅ منتشر شده | [مشاهده](cpp11/README.md) |
 | C++14 | ۲۰۱۴ | ✅ منتشر شده | [مشاهده](cpp14/README.md) |
 | C++17 | ۲۰۱۷ | ✅ منتشر شده | [مشاهده](cpp17/README.md) |
 | C++20 | ۲۰۲۰ | ✅ منتشر شده | [مشاهده](cpp20/README.md) |
 | C++23 | ۲۰۲۳ | ✅ منتشر شده | [مشاهده](cpp23/README.md) |
-| C++26 | ۲۰۶ | 🚧 در حال توسعه | [مشاهده](cpp26/README.md) |
+| C++26 | ۲۰۲۶ | 🚧 در حال توسعه | [مشاهده](cpp26/README.md) |
+| C++29 | ۲۰۲۹ | 🚧 در حال توسعه | [مشاهده](cpp29/README.md) |
 
 ## 🔍 دسترسی سریع
 - [اشاره‌گرهای هوشمند](cpp11/smart-pointers.md)
@@ -38,6 +39,7 @@
 | C++20 | 2020 | ✅ Released | [View](cpp20/README.md) |
 | C++23 | 2023 | ✅ Released | [View](cpp23/README.md) |
 | C++26 | 2026 | 🚧 In Development | [View](cpp26/README.md) |
+| C++29 | 2029 | 🚧 In Development | [View](cpp29/README.md) |
 
 ## 🔍 Quick Access
 - [Smart Pointers](cpp11/smart-pointers.md)
