@@ -8,7 +8,7 @@
 
 ---
 
-## 📚 C++ Standards Documentation
+## 📚 اسناد استاندارد C++
 
 <div align="center">
 
