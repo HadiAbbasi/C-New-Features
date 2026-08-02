@@ -12,7 +12,7 @@
 
 <div align="center">
 
-| Standard | Documentation |
+| استاندارد | سند |
 |----------|---------------|
 | C++98 | [![C++98](https://img.shields.io/badge/C%2B%2B-98-blue?style=for-the-badge)](https://en.cppreference.com/w/cpp?source=post_page---------------------------) |
 | C++11 | [![C++11](https://img.shields.io/badge/C%2B%2B-11-blue?style=for-the-badge)](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/fa/cpp11/README.md) |
