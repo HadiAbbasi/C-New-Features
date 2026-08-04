@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>آشنایی با nullptr در ++C</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --background-color: #f3f4f6;
+      --text-color: #1f2937;
+      --card-background: #ffffff;
+      --primary-color: #2563eb;
+      --code-background: #1e1e1e;
+      --code-text: #d4d4d4;
+      --inline-code-background: #e5e7eb;
+      --inline-code-color: #2563eb;
+      --border-radius: 16px;
+      --shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.05),
+        0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      direction: rtl;
+      margin: 0;
+      padding: 30px 20px;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      line-height: 2;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      margin-bottom: 24px;
+      padding: 32px;
+      background-color: var(--card-background);
+      border: 1px solid #ffffff;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 20px 25px -5px rgba(0, 0, 0, 0.05),
+        0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      color: var(--text-color);
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f3f4f6;
+      color: var(--primary-color);
+      font-size: 1.35rem;
+    }
+
+    p,
+    li {
+      color: #374151;
+      font-size: 1rem;
+    }
+
+    p {
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
+    ul {
+      margin: 14px 0;
+      padding-right: 24px;
+    }
+
+    blockquote {
+      margin: 20px 0;
+      padding: 18px 20px;
+      background-color: #eff6ff;
+      border-right: 5px solid var(--primary-color);
+      border-radius: 12px;
+      color: #1e3a8a;
+    }
+
+    blockquote p {
+      margin: 0;
+      color: #1e3a8a;
+    }
+
+    pre {
+      direction: ltr;
+      margin: 20px 0;
+      padding: 20px;
+      overflow-x: auto;
+      background-color: var(--code-background);
+      border: 1px solid #333333;
+      border-radius: 12px;
+      color: var(--code-text);
+      font-family: "Fira Code", Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    code {
+      direction: ltr;
+      font-family: "Fira Code", Consolas, monospace;
+    }
+
+    .inline-code,
+    p code,
+    li code,
+    td code,
+    th code {
+      direction: ltr;
+      display: inline-block;
+      padding: 2px 7px;
+      background-color: var(--inline-code-background);
+      border-radius: 6px;
+      color: var(--inline-code-color);
+      font-size: 0.85em;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    table {
+      width: 100%;
+      margin: 20px 0;
+      overflow: hidden;
+      background-color: #ffffff;
+      border-collapse: collapse;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    thead {
+      background-color: #eef2ff;
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: right;
+      vertical-align: top;
+    }
+
+    th {
+      color: #1f2937;
+      font-weight: 700;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .contributors-section {
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 2px solid #e5e7eb;
+    }
+
+    .contributors-title {
+      margin-bottom: 20px;
+      color: #4b5563;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .contributors-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contributor {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 460px;
+      padding: 12px 24px;
+      background-color: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .contributor:hover {
+      background-color: #ffffff;
+      border-color: #d1d5db;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transform: translateY(-2px);
+    }
+
+    .contributor-name {
+      color: #1f2937;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .contributor-links {
+      display: flex;
+      gap: 16px;
+      direction: ltr;
+    }
+
+    .contributor-links a {
+      display: flex;
+      align-items: center;
+      color: #6b7280;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .contributor-links a:hover {
+      transform: scale(1.15);
+    }
+
+    .contributor-links a.github:hover {
+      color: #24292f;
+    }
+
+    .contributor-links a.linkedin:hover {
+      color: #0077b5;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 12px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .contributor {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <section class="card">
+      <h1>آشنایی با <span class="inline-code">nullptr</span> در ++C</h1>
+
+      <blockquote>
+        <p>
+          <strong>تعریف:</strong>
+          در ++C، اشاره‌گر تهی به اشاره‌گری گفته می‌شود که به هیچ آدرس معتبر
+          حافظه‌ای اشاره نمی‌کند.
+        </p>
+      </blockquote>
+    </section>
+
+    <section class="card">
+      <h2>
+        گذار از <span class="inline-code">NULL</span> و
+        <span class="inline-code">0</span> به
+        <span class="inline-code">nullptr</span>
+      </h2>
+
+      <p>
+        در نسخه‌های قدیمی ++C، یعنی پیش از استاندارد C++11، و همچنین در زبان C،
+        معمولاً از دو روش زیر برای نمایش اشاره‌گر تهی استفاده می‌شد:
+      </p>
+
+      <pre><code>int* ptr = 0;</code></pre>
+
+      <pre><code>int* ptr = NULL;</code></pre>
+
+      <blockquote>
+        <p>
+          <strong>مشکل:</strong>
+          مقادیر <span class="inline-code">0</span> و
+          <span class="inline-code">NULL</span> معمولاً مقادیر عددی هستند،
+          نه یک نوع واقعی برای اشاره‌گر. این موضوع، به‌ویژه هنگام استفاده از
+          سربارگذاری تابع، می‌تواند باعث ابهام و ایجاد خطاهای دشوار شود.
+        </p>
+      </blockquote>
+
+      <pre><code>#include &lt;iostream&gt;
+
+void foo(int value) {
+    std::cout &lt;&lt; "تابع دارای پارامتر int فراخوانی شد\n";
+}
+
+void foo(int* pointer) {
+    std::cout &lt;&lt; "تابع دارای پارامتر اشاره‌گر فراخوانی شد\n";
+}
+
+int main() {
+    foo(NULL);
+}</code></pre>
+
+      <p>
+        در این مثال، کامپایلر ممکن است <span class="inline-code">NULL</span>
+        را به‌عنوان یک مقدار عددی در نظر بگیرد و تابع دارای پارامتر
+        <span class="inline-code">int</span> را انتخاب کند؛ یا در برخی شرایط،
+        با ابهام در انتخاب تابع مواجه شود.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>معرفی <span class="inline-code">nullptr</span> در C++11</h2>
+
+      <p>
+        از زمان معرفی استاندارد C++11، کلمهٔ کلیدی
+        <span class="inline-code">nullptr</span> برای حل این مشکل به شکلی
+        ایمن و صریح به زبان ++C اضافه شد.
+      </p>
+
+      <ul>
+        <li>
+          <strong>نوع مستقل:</strong>
+          <span class="inline-code">nullptr</span> یک مقدار ثابت از نوع
+          <span class="inline-code">std::nullptr_t</span> است.
+        </li>
+
+        <li>
+          <strong>ایمنی نوع:</strong>
+          این مقدار می‌تواند به انواع مختلف اشاره‌گر تبدیل شود، اما به انواع
+          عددی مانند <span class="inline-code">int</span> یا
+          <span class="inline-code">char</span> تبدیل نمی‌شود.
+        </li>
+
+        <li>
+          <strong>رفع ابهام در سربارگذاری:</strong>
+          هنگام استفاده از <span class="inline-code">nullptr</span>،
+          کامپایلر می‌تواند تابعی را که پارامتر اشاره‌گر دارد، به‌درستی
+          انتخاب کند.
+        </li>
+      </ul>
+
+      <pre><code>foo(nullptr);</code></pre>
+
+      <p>
+        در این حالت، تابع دارای پارامتر اشاره‌گر بدون ابهام انتخاب می‌شود.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>استفادهٔ ایمن از <span class="inline-code">nullptr</span></h2>
+
+      <p>
+        در ++C مدرن، زمانی که یک اشاره‌گر هنوز به شیء معتبری اشاره نمی‌کند،
+        آن را با <span class="inline-code">nullptr</span> مقداردهی اولیه کنید:
+      </p>
+
+      <pre><code>int* myPointer = nullptr;</code></pre>
+
+      <p>
+        پیش از دسترسی به مقدار اشاره‌گر یا تغییر داده‌ای که به آن اشاره می‌کند،
+        معتبر بودن اشاره‌گر را بررسی کنید:
+      </p>
+
+      <pre><code>if (myPointer != nullptr) {
+    *myPointer = 10;
+} else {
+    // اشاره‌گر تهی است.
+}</code></pre>
+
+      <p>
+        در ++C می‌توان بررسی کوتاه‌تر زیر را نیز به کار برد:
+      </p>
+
+      <pre><code>if (myPointer) {
+    *myPointer = 10;
+}</code></pre>
+
+      <p>
+        اگر مقدار اشاره‌گر تهی نباشد، شرط برقرار خواهد بود؛ در غیر این صورت،
+        یعنی زمانی که مقدار آن <span class="inline-code">nullptr</span> باشد،
+        شرط اجرا نمی‌شود.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>خلاصهٔ مقایسه</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ویژگی</th>
+            <th><span class="inline-code">nullptr</span> در C++11</th>
+            <th><span class="inline-code">NULL</span> و <span class="inline-code">0</span></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><strong>نوع داده</strong></td>
+            <td><span class="inline-code">std::nullptr_t</span></td>
+            <td>نوع عددی مانند <span class="inline-code">int</span></td>
+          </tr>
+
+          <tr>
+            <td><strong>ایمنی نوع</strong></td>
+            <td>بسیار ایمن و صریح</td>
+            <td>ضعیف‌تر و مستعد ایجاد ابهام در سربارگذاری</td>
+          </tr>
+
+          <tr>
+            <td><strong>استاندارد پیشنهادی</strong></td>
+            <td>++C مدرن، یعنی C++11 و نسخه‌های جدیدتر</td>
+            <td>کدهای قدیمی ++C و زبان C</td>
+          </tr>
+
+          <tr>
+            <td><strong>تبدیل به نوع عددی</strong></td>
+            <td>به‌صورت مستقیم به نوع‌هایی مانند <span class="inline-code">int</span> تبدیل نمی‌شود</td>
+            <td>معمولاً از ابتدا یک مقدار عددی است</td>
+          </tr>
+
+          <tr>
+            <td><strong>رفتار در سربارگذاری تابع</strong></td>
+            <td>تابع دارای پارامتر اشاره‌گر را به‌صورت واضح انتخاب می‌کند</td>
+            <td>ممکن است باعث انتخاب نادرست یا ابهام شود</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <blockquote>
+        <p>
+          <strong>نتیجه:</strong>
+          در برنامه‌های ++C مدرن، همیشه استفاده از
+          <span class="inline-code">nullptr</span> نسبت به
+          <span class="inline-code">NULL</span> و
+          <span class="inline-code">0</span> توصیه می‌شود.
+        </p>
+      </blockquote>
+    </section>
+
+    
+
+  </main>
+</body>
+</html>
+```
