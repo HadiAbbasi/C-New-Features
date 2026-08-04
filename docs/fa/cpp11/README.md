@@ -12,7 +12,7 @@
 
 <div align="center">
 
-| دستورات جدید | 
+| امکانات جدید | 
 |----------|
 | [auto](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/fa/cpp11/auto.md) |
 | [nullptr](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/fa/cpp11/nullptr.md) |
