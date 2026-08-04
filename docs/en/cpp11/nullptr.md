@@ -57,8 +57,3 @@ int* myPtr = nullptr;
 | **Data Type** | `std::nullptr_t` | Integral (`int` or cast to `void*` in C) |
 | **Type Safety** | Highly Type-Safe | Weak (Prone to overload resolution issues) |
 | **Recommended Standard** | Modern C++ (C++11 and newer) | Legacy C++ and C |
-
-## Author
-- **GitHub:** https://github.com/mbr1376
-
-- **LinkedIn:** https://www.linkedin.com/in/mbr1376
