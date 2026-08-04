@@ -1,6 +1,6 @@
 <div align="right">
 
-[🇺🇸 English](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/en/cpp11/nullptr.md) | [🇮🇷 فارسی](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/fa/cpp11/nullptr.md)
+[🇺🇸 English](docs/en/cpp11/nullptr.md) | [🇮🇷 فارسی](docs/fa/cpp11/nullptr.md)
 
 </div>
 

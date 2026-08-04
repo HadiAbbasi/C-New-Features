@@ -2,7 +2,7 @@
 
 <div align="right">
 
-[🇺🇸 English](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/en/cpp11/README.md) | [🇮🇷 فارسی](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/fa/cpp11/README.md)
+[🇺🇸 English](docs/en/cpp11/README.md) | [🇮🇷 فارسی](docs/fa/cpp11/README.md)
 
 </div>
 
@@ -14,8 +14,8 @@
 
 | New Features | 
 |----------|
-| [auto](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/en/cpp11/auto.md) |
-| [nullptr](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/en/cpp11/nullptr.md) |
+| [auto](docs/en/cpp11/auto.md) |
+| [nullptr](docs/en/cpp11/nullptr.md) |
 
 </div>
 
