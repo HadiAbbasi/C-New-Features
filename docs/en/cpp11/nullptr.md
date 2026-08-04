@@ -2,7 +2,7 @@
 
 <div align="right">
 
-[🇺🇸 English](./auto.md) | [🇮🇷 فارسی](../../fa/cpp11/nullptr.md)
+[🇺🇸 English](./nullptr.md) | [🇮🇷 فارسی](../../fa/cpp11/nullptr.md)
 
 </div>
 
