@@ -1,3 +1,10 @@
+<div align="right">
+
+[🇺🇸 English](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/en/cpp11/nullptr.md) | [🇮🇷 فارسی](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/fa/cpp11/nullptr.md)
+
+</div>
+
+---
 # آشنایی با nullptr در ++C
 
 > **تعریف:**

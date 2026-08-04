@@ -1,3 +1,10 @@
+<div align="right">
+
+[🇺🇸 English](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/en/cpp11/auto.md) | [🇮🇷 فارسی](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/fa/cpp11/auto.md)
+
+</div>
+
+---
 # auto
 
 > **نسخه معرفی:** C++11
