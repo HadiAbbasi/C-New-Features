@@ -14,8 +14,8 @@
 
 | امکانات جدید | 
 |----------|
-| [auto](docs/fa/cpp11/auto.md) |
-| [nullptr](docs/fa/cpp11/nullptr.md) |
+| [auto](./auto.md) |
+| [nullptr](./nullptr.md) |
 
 </div>
 
