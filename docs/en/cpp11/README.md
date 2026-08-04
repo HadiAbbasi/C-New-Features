@@ -2,7 +2,7 @@
 
 <div align="right">
 
-[🇺🇸 English](README.md) | [🇮🇷 فارسی](../../fa/cpp11/README.fa.md)
+[🇺🇸 English](README.md) | [🇮🇷 فارسی](https://github.com/HadiAbbasi/Cpp-Modern-Features/blob/main/docs/fa/cpp11/README.md)
 
 </div>
 
