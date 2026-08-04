@@ -1,11 +1,12 @@
+# nullptr
+
 <div align="right">
 
-[🇺🇸 English](docs/en/cpp11/nullptr.md) | [🇮🇷 فارسی](docs/fa/cpp11/nullptr.md)
+[🇺🇸 English](./auto.md) | [🇮🇷 فارسی](../../../fa/cpp11/nullptr.md)
 
 </div>
 
 ---
-# nullptr
 
  > **define:** In C++, the concept of a null pointer is used to represent a pointer that does not point to any valid memory address.
 

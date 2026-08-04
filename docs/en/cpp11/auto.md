@@ -1,5 +1,13 @@
 # auto
 
+<div align="right">
+
+[🇺🇸 English](./auto.md) | [🇮🇷 فارسی](../../../fa/cpp11/auto.md)
+
+</div>
+
+---
+
 > **Introduced in:** C++11
 
 ## Introduction

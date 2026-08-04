@@ -2,7 +2,7 @@
 
 <div align="right">
 
-[🇺🇸 English](docs/en/cpp11/README.md) | [🇮🇷 فارسی](docs/fa/cpp11/README.md)
+[🇺🇸 English](../../../en/cpp11/README.md) | [🇮🇷 فارسی](./README.md)
 
 </div>
 

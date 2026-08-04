@@ -1,6 +1,6 @@
 <div align="right">
 
-[🇺🇸 English](docs/en/cpp11/auto.md) | [🇮🇷 فارسی](docs/fa/cpp11/auto.md)
+[🇺🇸 English](../../../en/cpp11/auto.md) | [🇮🇷 فارسی](./auto.md)
 
 </div>
 

@@ -1,6 +1,6 @@
 <div align="right">
 
-[🇺🇸 English](docs/en/cpp11/nullptr.md) | [🇮🇷 فارسی](docs/fa/cpp11/nullptr.md)
+[🇺🇸 English](../../../en/cpp11/nullptr.md) | [🇮🇷 فارسی](./nullptr.md)
 
 </div>
 
