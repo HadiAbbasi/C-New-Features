@@ -15,6 +15,7 @@
 |----------|
 | [auto](./auto.md) |
 | [nullptr](./nullptr.md) |
+| [lambda](./lambda.md) | 
 
 </div>
 
