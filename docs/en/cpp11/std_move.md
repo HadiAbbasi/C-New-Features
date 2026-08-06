@@ -1,6 +1,6 @@
 <div align="right">
 
-[🇺🇸 English](./std_move.md) | [🇮🇷 فارسی](../../en/cpp11/std_move.md)
+[🇺🇸 English](./std_move.md) | [🇮🇷 فارسی](../../fa/cpp11/std_move.md)
 
 </div>
 
