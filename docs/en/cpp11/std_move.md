@@ -1,6 +1,10 @@
 <div align="right">
-[🇺🇸 English](../../en/cpp11/std_move.md) | [🇮🇷 فارسی](./std_move.md)
+
+[🇺🇸 English](./std_move.md) | [🇮🇷 فارسی](../../en/cpp11/std_move.md)
+
 </div>
+
+---
 
 The Topic of Move Semantics, `std::move`, and the Concepts of `lvalue` and `rvalue` in C++
 Introduced in: C++11
