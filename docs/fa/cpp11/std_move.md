@@ -635,6 +635,7 @@ Buffer& operator=(Buffer&& other) noexcept;
 - https://en.cppreference.com/w/cpp/utility/move
 - https://en.cppreference.com/w/cpp/language/move_constructor
 - https://en.cppreference.com/w/cpp/language/value_category
+
 توجه: این مقاله با استفاده از توضیحات و بازنویسی انجام‌شده توسط **ChatGPT (OpenAI)** و **Qwen (Alibaba)** تهیه و ویرایش شده است.
 
 ## 🤝 مشارکت کنندگان
