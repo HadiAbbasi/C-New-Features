@@ -15,6 +15,7 @@
 |----------|
 | [auto](./auto.md) |
 | [nullptr](./nullptr.md) |
+| [std::move](./std_move.md) |
 
 </div>
 

@@ -16,6 +16,7 @@
 | [auto](./auto.md) |
 | [nullptr](./nullptr.md) |
 | [lambda](./lambda.md) | 
+| [std::move](./std_move.md) |
 
 </div>
 
