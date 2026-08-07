@@ -1,4 +1,4 @@
-[🇺🇸 English](./lambda.md) | [🇮🇷 فارسی](../../fa/cpp11/lambda.md)
+[🇺🇸 English](../../en/cpp11/lambda.md) | [🇮🇷 فارسی](./lambda.md)
 
 # عبارت Lambda
 
