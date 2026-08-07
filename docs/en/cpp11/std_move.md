@@ -561,9 +561,9 @@ const std::string a = "Hello";
 std::string b = std::move(a);
 ```
 
-در این حالت معمولاً move انجام نمی‌شود، زیرا move constructor معمولاً یک `std::string&&` غیرثابت می‌گیرد. در نتیجه ممکن است copy انجام شود.
-به بیان بهتر چون در move constructor و move assignment قرار است مقدار داده اول پس از انتقال نا معتبر شود، معمولا ورودی این دو مورد را با شی rvalue reference && غیر const تعریف می کنند و ارسال داده const باعث می شود احتمالا این دو مورد move صدا زده نشوند و copy constructor یا copy assignment صدا زده شود!
+In this case, a move usually does not occur because the move constructor typically takes a non-const std::string&&. As a result, a copy may be performed instead.
 
+In other words, since the source object is expected to become invalid or be left in a moved-from state after a move operation, move constructors and move assignment operators typically take their parameters as non-const rvalue references (&&). Passing a const object prevents the move constructor or move assignment operator from being called in many cases, because a const object cannot be modified or moved from. As a result, the copy constructor or copy assignment operator may be selected instead.
 ---
 
 ### 5. using `return std::move(local)`
