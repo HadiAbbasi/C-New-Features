@@ -607,6 +607,7 @@ Many containers, such as `std::vector`, use move during reallocation only if the
 ## Summary
 
 | Concept|Description|
+|---|---|
 | lvalue|An expression with a distinct identity that can usually be referred to and whose address can be taken.|
 | rvalue|A temporary value or object that usually has a short lifetime and from which a Move operation can be performed.|
 | prvalue|A temporary value without identity; such as 5 or the result of a function that returns its value by value.|
