@@ -14,7 +14,7 @@
 | New Features | 
 |----------|
 | [std::pair](./pair.md) |
-| [std::tuple](./tupple.md) |
+| [std::tuple](./tuple.md) |
 
 </div>
 
